@@ -21,7 +21,7 @@
 })(function sortableFactory() {
 	"use strict";
 
-	if (typeof window === "undefined" || !window.document) {
+	if (typeof window === "undefined" || !window.document || !navigator.userAgent) {
 		return function sortableError() {
 			throw new Error("Sortable.js requires a window with a document");
 		};
